@@ -102,4 +102,23 @@
   const sections = Utils.$$('.stats, .features, .cta');
   sections.forEach(section => observer.observe(section));
 
+  // Connect wallet step button
+  const connectWalletBtn = document.getElementById('connectWalletStep');
+  if (connectWalletBtn) {
+    connectWalletBtn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      if (typeof Wallet !== 'undefined' && Wallet.connect) {
+        if (!Wallet.connected) {
+          await Wallet.connect();
+        }
+      } else {
+        console.error('Wallet not loaded');
+      }
+      
+      return false;
+    });
+  }
+
 })();

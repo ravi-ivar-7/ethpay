@@ -42,23 +42,23 @@ const PaymentLink = {
    * Save payment link to history
    */
   savePaymentLink(paymentData) {
-    const history = Utils.storage.get(CONFIG.STORAGE_KEYS.PAYMENT_HISTORY) || [];
+    const history = Utils.storage.get(Config.STORAGE_KEYS.PAYMENT_HISTORY) || [];
     
     history.unshift(paymentData);
     
     // Keep only last MAX_PAYMENT_HISTORY items
-    if (history.length > CONFIG.MAX_PAYMENT_HISTORY) {
-      history.splice(CONFIG.MAX_PAYMENT_HISTORY);
+    if (history.length > (Config.MAX_PAYMENT_HISTORY || 50)) {
+      history.splice(Config.MAX_PAYMENT_HISTORY || 50);
     }
 
-    Utils.storage.set(CONFIG.STORAGE_KEYS.PAYMENT_HISTORY, history);
+    Utils.storage.set(Config.STORAGE_KEYS.PAYMENT_HISTORY, history);
   },
 
   /**
    * Get payment history
    */
   getHistory() {
-    return Utils.storage.get(CONFIG.STORAGE_KEYS.PAYMENT_HISTORY) || [];
+    return Utils.storage.get(Config.STORAGE_KEYS.PAYMENT_HISTORY) || [];
   },
 
   /**
@@ -73,6 +73,6 @@ const PaymentLink = {
    * Clear history
    */
   clearHistory() {
-    Utils.storage.remove(CONFIG.STORAGE_KEYS.PAYMENT_HISTORY);
+    Utils.storage.remove(Config.STORAGE_KEYS.PAYMENT_HISTORY);
   }
 };

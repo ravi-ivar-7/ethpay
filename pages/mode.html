@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mode Selection - Choose Demo, Testnet, or Mainnet">
+    <title>Mode Selection - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/mode-switcher.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    <link rel="stylesheet" href="../styles/pages/mode.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">🎮 Mode Selection</h1>
+            <p class="page-header__subtitle">Choose how you want to use ethpay</p>
+        </div>
+    </section>
+
+    <!-- Mode Selection -->
+    <section class="section" style="padding: 0;">
+        <div class="container">
+            <div class="container-narrow">
+                
+                <!-- Mode Switcher -->
+                <div class="mode-card">
+                    <div id="mode-switcher-placeholder"></div>
+                </div>
+
+                <!-- Mode Descriptions -->
+                <div class="mode-grid">
+                    <div class="mode-description-card mode-description-card--demo">
+                        <div class="mode-icon">🎮</div>
+                        <h3>Demo Mode</h3>
+                        <p>Simulated transactions without connecting a wallet. Perfect for testing the interface and exploring features.</p>
+                        <ul class="mode-features">
+                            <li>✅ No wallet required</li>
+                            <li>✅ Instant transactions</li>
+                            <li>✅ Risk-free testing</li>
+                            <li>❌ Not real blockchain</li>
+                        </ul>
+                    </div>
+
+                    <div class="mode-description-card mode-description-card--mainnet">
+                        <div class="mode-icon">🌐</div>
+                        <h3>Mainnet Mode</h3>
+                        <p>Real transactions with real ETH/BAT on Ethereum mainnet. Use with caution - transactions cannot be reversed.</p>
+                        <ul class="mode-features">
+                            <li>✅ Production environment</li>
+                            <li>✅ Real BAT transfers</li>
+                            <li>⚠️ Requires real funds</li>
+                            <li>⚠️ Gas fees apply</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>⚠️ Warning:</strong> Only use mainnet when you're ready. Real funds are at risk.
+                        </div>
+                    </div>
+
+                    <div class="mode-description-card mode-description-card--testnet">
+                        <div class="mode-icon">🧪</div>
+                        <h3>Testnet - Easy Faucets</h3>
+                        <p>Get free Sepolia test ETH with just a login (no mainnet ETH needed).</p>
+                        <ul class="mode-features">
+                            <li>✅ Real blockchain transactions</li>
+                            <li>✅ Free test ETH</li>
+                            <li>✅ No mainnet ETH required</li>
+                            <li>✅ Just login with account</li>
+                        </ul>
+                        <div class="faucet-links">
+                            <strong>Quick Faucets:</strong>
+                            <a href="https://cloud.google.com/application/web3/faucet/ethereum/sepolia" target="_blank">Google Cloud</a>
+                            <a href="https://www.alchemy.com/faucets/ethereum-sepolia" target="_blank">Alchemy</a>
+                            <a href="https://faucet.quicknode.com/ethereum/sepolia" target="_blank">QuickNode</a>
+                        </div>
+                    </div>
+
+                    <div class="mode-description-card mode-description-card--testnet">
+                        <div class="mode-icon">💰</div>
+                        <h3>Testnet - More Options</h3>
+                        <p>Alternative ways to get Sepolia test ETH if easy faucet doesn't work.</p>
+                        <ul class="mode-features">
+                            <li>💸 Buy 0.001 ETH (~$3) on mainnet</li>
+                            <li>💬 Ask in Discord communities</li>
+                            <li>🔗 Use social media faucets</li>
+                            <li>🤝 Get from developer friends</li>
+                        </ul>
+                        <div class="faucet-links">
+                            <strong>Alternative Options:</strong>
+                            <a href="https://faucets.chain.link/sepolia" target="_blank">Chainlink (needs LINK)</a>
+                            <a href="https://discord.gg/ethereum" target="_blank">Ethereum Discord</a>
+                            <a href="https://sepoliafaucet.com/" target="_blank">Sepolia Faucet (needs 0.001 ETH)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Status -->
+                <div class="status-card">
+                    <h3 class="status-card__title">Current Status</h3>
+                        <div class="status-item">
+                            <span class="status-label">Mode:</span>
+                            <span class="status-value" id="currentMode">Demo</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Network:</span>
+                            <span class="status-value" id="currentNetwork">-</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Wallet:</span>
+                            <span class="status-value" id="walletStatus">Not Connected</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    <script src="../scripts/modules/network/network-manager.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/mode-switcher.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Page Script -->
+    <script src="../scripts/pages/mode.js"></script>
+</body>
+</html>

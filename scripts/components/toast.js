@@ -23,7 +23,7 @@ const Toast = {
     }
   },
 
-  show(message, type = 'info', duration = CONFIG.TOAST_DURATION) {
+  show(message, type = 'info', duration = 3000) {
     this.init();
 
     const toast = document.createElement('div');

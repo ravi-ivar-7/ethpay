@@ -30,6 +30,7 @@
     
     <!-- Component Styles -->
     <link rel="stylesheet" href="styles/components/navigation.css">
+    <link rel="stylesheet" href="styles/components/mode-switcher.css">
     <link rel="stylesheet" href="styles/components/buttons.css">
     <link rel="stylesheet" href="styles/components/cards.css">
     <link rel="stylesheet" href="styles/components/footer.css">
@@ -68,6 +69,36 @@
                             <!-- Content will be dynamically loaded by JavaScript -->
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="features" style="background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);">
+        <div class="container">
+            <h2 class="section__title">Get Started in 3 Easy Steps</h2>
+            <div class="features__grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="feature-card">
+                    <div class="feature-card__icon" style="font-size: 64px;">🦁</div>
+                    <div style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #FB542B 0%, #FF6B35 100%); color: white; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center;">1</div>
+                    <h3 class="feature-card__title">Connect Wallet</h3>
+                    <p class="feature-card__description">Connect your Brave Wallet or MetaMask to get started</p>
+                    <a href="#" id="connectWalletStep" style="color: #FB542B; font-weight: 600; text-decoration: none;">Connect Now →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon" style="font-size: 64px;">🎮</div>
+                    <div style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #FB542B 0%, #FF6B35 100%); color: white; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center;">2</div>
+                    <h3 class="feature-card__title">Select Mode</h3>
+                    <p class="feature-card__description">Choose Demo, Testnet, or Mainnet mode</p>
+                    <a href="pages/mode.html" style="color: #FB542B; font-weight: 600; text-decoration: none;">Choose Mode →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon" style="font-size: 64px;">💸</div>
+                    <div style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #FB542B 0%, #FF6B35 100%); color: white; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center;">3</div>
+                    <h3 class="feature-card__title">Start Transacting</h3>
+                    <p class="feature-card__description">Send BAT, create payment links, and track analytics</p>
+                    <a href="pages/request.html" style="color: #FB542B; font-weight: 600; text-decoration: none;">Create Payment →</a>
                 </div>
             </div>
         </div>
@@ -181,10 +212,12 @@
     
     <!-- Modules -->
     <script src="scripts/modules/wallet/wallet.js"></script>
+    <script src="scripts/modules/network/network-manager.js"></script>
     <script src="scripts/modules/bat-stats/stats-api.js"></script>
     
     <!-- Components -->
     <script src="scripts/components/navigation.js"></script>
+    <script src="scripts/components/mode-switcher.js"></script>
     <script src="scripts/components/cta.js"></script>
     <script src="scripts/components/footer.js"></script>
     <script src="scripts/components/toast.js"></script>

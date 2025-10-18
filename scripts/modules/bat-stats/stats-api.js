@@ -15,7 +15,7 @@ const BATStats = {
   async fetchStats() {
     try {
       const response = await fetch(
-        `${CONFIG.COINGECKO_API}/coins/${CONFIG.BAT_COINGECKO_ID}?localization=false&tickers=false&community_data=false&developer_data=false`
+        `${Config.COINGECKO_API || Config.api.coingecko}/coins/${Config.BAT_COINGECKO_ID || 'basic-attention-token'}?localization=false&tickers=false&community_data=false&developer_data=false`
       );
 
       if (!response.ok) {
@@ -52,7 +52,7 @@ const BATStats = {
    */
   async getStats(forceRefresh = false) {
     const cacheAge = this.cache.timestamp ? Date.now() - this.cache.timestamp : Infinity;
-    const cacheValid = cacheAge < CONFIG.STATS_REFRESH_INTERVAL;
+    const cacheValid = cacheAge < (Config.STATS_REFRESH_INTERVAL || 30000);
 
     if (!forceRefresh && cacheValid && this.cache.data) {
       return this.cache.data;
@@ -124,7 +124,7 @@ const BATStats = {
     // Set up interval
     setInterval(() => {
       this.updateDisplay();
-    }, CONFIG.STATS_REFRESH_INTERVAL);
+    }, Config.STATS_REFRESH_INTERVAL || 30000);
   },
 
   /**

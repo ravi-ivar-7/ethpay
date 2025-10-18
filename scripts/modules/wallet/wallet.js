@@ -201,6 +201,61 @@ const Wallet = {
         localStorage.removeItem('wallet_address');
       }
     }
+  },
+
+  /**
+   * Send ETH transaction
+   */
+  async sendTransaction(to, amount) {
+    if (!this.connected) {
+      throw new Error('Wallet not connected');
+    }
+
+    if (!to || !amount) {
+      throw new Error('Invalid transaction parameters');
+    }
+
+    try {
+      // Convert amount to Wei (1 ETH = 10^18 Wei)
+      const amountInWei = '0x' + (BigInt(Math.floor(amount * 1e18))).toString(16);
+
+      const txHash = await window.ethereum.request({
+        method: 'eth_sendTransaction',
+        params: [{
+          from: this.address,
+          to: to,
+          value: amountInWei,
+        }],
+      });
+
+      return txHash;
+    } catch (error) {
+      console.error('Transaction failed:', error);
+      throw error;
+    }
+  },
+
+  /**
+   * Get balance
+   */
+  async getBalance() {
+    if (!this.connected) {
+      return '0';
+    }
+
+    try {
+      const balance = await window.ethereum.request({
+        method: 'eth_getBalance',
+        params: [this.address, 'latest'],
+      });
+
+      // Convert from Wei to ETH
+      const balanceInEth = parseInt(balance, 16) / 1e18;
+      return balanceInEth.toFixed(4);
+    } catch (error) {
+      console.error('Failed to get balance:', error);
+      return '0';
+    }
   }
 };
 

@@ -19,7 +19,7 @@ const NavigationComponent = {
             <ul class="nav__menu">
               <li><a href="${basePath}index.html" class="nav__link ${currentPage === 'home' ? 'nav__link--active' : ''}">Home</a></li>
               <li><a href="${basePath}pages/features.html" class="nav__link ${currentPage === 'features' ? 'nav__link--active' : ''}">Features</a></li>
-              <li><a href="${basePath}pages/demo.html" class="nav__link ${currentPage === 'demo' ? 'nav__link--active' : ''}">Demo</a></li>
+              <li><a href="${basePath}pages/mode.html" class="nav__link ${currentPage === 'mode' ? 'nav__link--active' : ''}">Mode</a></li>
               <li class="nav__dropdown">
                 <span class="nav__link ${currentPage === 'tools' ? 'nav__link--active' : ''}" style="cursor: pointer;">
                   Tools <span class="dropdown-arrow">▼</span>
@@ -65,6 +65,7 @@ const NavigationComponent = {
   getCurrentPage() {
     const path = window.location.pathname;
     if (path.includes('features')) return 'features';
+    if (path.includes('mode')) return 'mode';
     if (path.includes('demo')) return 'demo';
     if (path.includes('tools')) return 'tools';
     // Check for individual tool pages
