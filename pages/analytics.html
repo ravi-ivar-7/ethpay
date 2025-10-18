@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BAT Payment Analytics - Track payments with visual charts and insights">
+    <title>Payment Analytics - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    <link rel="stylesheet" href="../styles/pages/analytics.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">📊 Payment Analytics</h1>
+            <p class="page-header__subtitle">Track your BAT payment history with visual charts and detailed insights</p>
+        </div>
+    </section>
+
+    <!-- Analytics Dashboard -->
+    <section class="section" style="padding: 0;">
+        <div class="container">
+            
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card__icon">💰</div>
+                    <div class="stat-card__value" id="totalVolume">0 BAT</div>
+                    <div class="stat-card__label">Total Volume</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card__icon">📤</div>
+                    <div class="stat-card__value" id="totalSent">0 BAT</div>
+                    <div class="stat-card__label">Total Sent</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card__icon">📥</div>
+                    <div class="stat-card__value" id="totalReceived">0 BAT</div>
+                    <div class="stat-card__label">Total Received</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-card__icon">🔢</div>
+                    <div class="stat-card__value" id="transactionCount">0</div>
+                    <div class="stat-card__label">Transactions</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid">
+                
+                <!-- Volume Chart -->
+                <div class="chart-card">
+                    <h3 class="chart-card__title">📈 Payment Volume (Last 7 Days)</h3>
+                    <canvas id="volumeChart"></canvas>
+                </div>
+                
+                <!-- Transaction Types -->
+                <div class="chart-card">
+                    <h3 class="chart-card__title">🎯 Transaction Types</h3>
+                    <canvas id="typeChart"></canvas>
+                </div>
+                
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="transactions-card">
+                <div class="transactions-header">
+                    <h3 class="transactions-title">📜 Recent Transactions</h3>
+                    <button class="btn btn--outline btn--sm" id="refreshBtn">Refresh</button>
+                </div>
+                <div class="transactions-list" id="transactionsList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Tool Script -->
+    <script src="../scripts/tools/analytics.js"></script>
+</body>
+</html>

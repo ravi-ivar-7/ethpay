@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore all features of ethpay - BAT payment links, wallet integration, analytics, and more.">
+    <title>Features - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+    <link rel="stylesheet" href="../styles/animations/keyframes.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Powerful Features for BAT Payments</h1>
+            <p class="page-header__subtitle">Everything you need to send, receive, and manage BAT payments</p>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-page-section">
+        <div class="container">
+            <div class="features-detailed">
+                
+                <!-- Feature 1: Payment Links -->
+                <div class="feature-detail">
+                    <div class="feature-detail__icon">💳</div>
+                    <div class="feature-detail__content">
+                        <h2 class="feature-detail__title">Payment Link Generator</h2>
+                        <p class="feature-detail__description">
+                            Create shareable payment links in seconds. Simply enter the amount, recipient address, 
+                            and description to generate a unique payment link with QR code.
+                        </p>
+                        <ul class="feature-detail__list">
+                            <li>✓ Instant link generation</li>
+                            <li>✓ QR code for mobile payments</li>
+                            <li>✓ Copy to clipboard</li>
+                            <li>✓ Save payment history</li>
+                            <li>✓ Shareable via any platform</li>
+                        </ul>
+                        <a href="demo.html" class="btn btn--primary">Try It Now</a>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Wallet Integration -->
+                <div class="feature-detail feature-detail--reverse">
+                    <div class="feature-detail__icon">🦁</div>
+                    <div class="feature-detail__content">
+                        <h2 class="feature-detail__title">Brave Wallet Integration</h2>
+                        <p class="feature-detail__description">
+                            Seamlessly connect your Brave Wallet for secure BAT transactions. 
+                            One-click connection with full transaction signing support.
+                        </p>
+                        <ul class="feature-detail__list">
+                            <li>✓ Instant wallet detection</li>
+                            <li>✓ Secure connection</li>
+                            <li>✓ View BAT balance</li>
+                            <li>✓ Sign transactions</li>
+                            <li>✓ Account management</li>
+                        </ul>
+                        <button class="btn btn--primary" id="connectWalletFeature">Connect Wallet</button>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Live Stats -->
+                <div class="feature-detail">
+                    <div class="feature-detail__icon">📊</div>
+                    <div class="feature-detail__content">
+                        <h2 class="feature-detail__title">Live BAT Statistics</h2>
+                        <p class="feature-detail__description">
+                            Real-time BAT token data powered by CoinGecko and Etherscan. 
+                            Stay updated with live prices, market cap, and trading volume.
+                        </p>
+                        <ul class="feature-detail__list">
+                            <li>✓ Real-time price updates</li>
+                            <li>✓ 24h price change tracking</li>
+                            <li>✓ Market cap & volume</li>
+                            <li>✓ Auto-refresh every 30s</li>
+                            <li>✓ Historical data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Currency Converter -->
+                <div class="feature-detail feature-detail--reverse">
+                    <div class="feature-detail__icon">💱</div>
+                    <div class="feature-detail__content">
+                        <h2 class="feature-detail__title">Multi-Currency Converter</h2>
+                        <p class="feature-detail__description">
+                            Convert BAT to USD, EUR, ETH, and BTC instantly. 
+                            Real-time exchange rates for accurate conversions.
+                        </p>
+                        <ul class="feature-detail__list">
+                            <li>✓ BAT ↔ USD/EUR/ETH/BTC</li>
+                            <li>✓ Real-time exchange rates</li>
+                            <li>✓ Visual calculator</li>
+                            <li>✓ Historical rates</li>
+                            <li>✓ Quick conversions</li>
+                        </ul>
+                        <a href="tools.html" class="btn btn--primary">Use Converter</a>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Payment Analytics -->
+                <div class="feature-detail">
+                    <div class="feature-detail__icon">📈</div>
+                    <div class="feature-detail__content">
+                        <h2 class="feature-detail__title">Payment Analytics</h2>
+                        <p class="feature-detail__description">
+                            Track your payment activity with visual charts and detailed analytics. 
+                            Export data for record keeping.
+                        </p>
+                        <ul class="feature-detail__list">
+                            <li>✓ Transaction history</li>
+                            <li>✓ Visual charts & graphs</li>
+                            <li>✓ Payment trends</li>
+                            <li>✓ Export to CSV</li>
+                            <li>✓ Filter & search</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 6: Payment Requests -->
+                <div class="feature-detail feature-detail--reverse">
+                    <div class="feature-detail__icon">📝</div>
+                    <div class="feature-detail__content">
+                        <h2 class="feature-detail__title">Payment Request System</h2>
+                        <p class="feature-detail__description">
+                            Create professional payment requests with tracking. 
+                            Monitor payment status in real-time.
+                        </p>
+                        <ul class="feature-detail__list">
+                            <li>✓ Generate payment requests</li>
+                            <li>✓ Track payment status</li>
+                            <li>✓ Expiration timers</li>
+                            <li>✓ Payment notifications</li>
+                            <li>✓ Request history</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/cta.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Page Script -->
+    <script src="../scripts/pages/features.js"></script>
+</body>
+</html>

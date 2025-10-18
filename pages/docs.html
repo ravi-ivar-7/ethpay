@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ethpay documentation - Learn how to integrate BAT payments into your website.">
+    <title>Documentation - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    <link rel="stylesheet" href="../styles/pages/docs.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Documentation</h1>
+            <p class="page-header__subtitle">Learn how to use ethpay and integrate BAT payments</p>
+        </div>
+    </section>
+
+    <!-- Documentation Content -->
+    <section class="docs-content">
+        <div class="container">
+            <div class="container-narrow">
+                
+                <!-- Getting Started -->
+                <div class="doc-section">
+                    <h2 class="doc-section__title">Getting Started</h2>
+                    <p class="doc-section__text">
+                        ethpay makes it easy to create and share BAT payment links. Here's how to get started:
+                    </p>
+                    <ol class="doc-list doc-list--ordered">
+                        <li>Connect your Brave Wallet</li>
+                        <li>Go to the Demo page</li>
+                        <li>Enter payment amount and recipient address</li>
+                        <li>Generate your payment link</li>
+                        <li>Share the link or QR code</li>
+                    </ol>
+                </div>
+
+                <!-- Payment Links -->
+                <div class="doc-section">
+                    <h2 class="doc-section__title">Creating Payment Links</h2>
+                    <p class="doc-section__text">
+                        Payment links make it easy to request BAT payments. Simply provide:
+                    </p>
+                    <ul class="doc-list">
+                        <li><strong>Amount:</strong> How much BAT to request</li>
+                        <li><strong>Recipient Address:</strong> Your Ethereum address</li>
+                        <li><strong>Description:</strong> Optional payment description</li>
+                    </ul>
+                </div>
+
+                <!-- Brave Wallet -->
+                <div class="doc-section">
+                    <h2 class="doc-section__title">Brave Wallet Integration</h2>
+                    <p class="doc-section__text">
+                        ethpay integrates seamlessly with Brave Wallet:
+                    </p>
+                    <ul class="doc-list">
+                        <li>One-click wallet connection</li>
+                        <li>Secure transaction signing</li>
+                        <li>View your BAT balance</li>
+                        <li>Automatic address detection</li>
+                    </ul>
+                </div>
+
+                <!-- API Reference -->
+                <div class="doc-section">
+                    <h2 class="doc-section__title">API Reference</h2>
+                    <p class="doc-section__text">
+                        ethpay uses the following APIs:
+                    </p>
+                    <div class="api-card">
+                        <h3 class="api-card__title">CoinGecko API</h3>
+                        <p class="api-card__desc">Real-time BAT price and market data</p>
+                        <a href="https://www.coingecko.com/en/api" target="_blank" rel="noopener" class="api-card__link">View Documentation →</a>
+                    </div>
+                    <div class="api-card">
+                        <h3 class="api-card__title">Etherscan API</h3>
+                        <p class="api-card__desc">BAT token contract and transaction data</p>
+                        <a href="https://etherscan.io/apis" target="_blank" rel="noopener" class="api-card__link">View Documentation →</a>
+                    </div>
+                </div>
+
+                <!-- External Resources -->
+                <div class="doc-section">
+                    <h2 class="doc-section__title">External Resources</h2>
+                    <div class="resource-grid">
+                        <a href="https://brave.com" target="_blank" rel="noopener" class="resource-item">
+                            <h3>Brave Browser</h3>
+                            <p>Download Brave Browser</p>
+                        </a>
+                        <a href="https://basicattentiontoken.org" target="_blank" rel="noopener" class="resource-item">
+                            <h3>Basic Attention Token</h3>
+                            <p>Learn about BAT</p>
+                        </a>
+                        <a href="https://brave.com/wallet/" target="_blank" rel="noopener" class="resource-item">
+                            <h3>Brave Wallet</h3>
+                            <p>Wallet documentation</p>
+                        </a>
+                        <a href="https://etherscan.io/token/0x0D8775F648430679A709E98d2b0Cb6250d2887EF" target="_blank" rel="noopener" class="resource-item">
+                            <h3>BAT on Etherscan</h3>
+                            <p>View BAT token contract</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="doc-cta">
+                    <h2>Need Help?</h2>
+                    <p>Check out our demo or reach out on social media</p>
+                    <div class="doc-cta__buttons">
+                        <a href="demo.html" class="btn btn--primary">Try Demo</a>
+                        <a href="https://twitter.com/ethpay" target="_blank" rel="noopener" class="btn btn--secondary">Twitter</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+</body>
+</html>

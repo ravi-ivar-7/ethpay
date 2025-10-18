@@ -1,0 +1,156 @@
+/**
+ * Payment Requests Tool Styles
+ */
+
+.request-card, .generated-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-md);
+  border: 2px solid var(--color-gray-100);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.request-card::before, .generated-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.request-card__title, .generated-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  background: var(--color-white);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(251, 84, 43, 0.1);
+}
+
+.form-input:read-only {
+  background: var(--color-gray-50);
+  cursor: not-allowed;
+}
+
+/* Request Details */
+.request-details {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border: 2px solid var(--color-gray-200);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+}
+
+.detail-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-100);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+}
+
+.detail-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  font-weight: var(--font-weight-semibold);
+}
+
+.detail-value {
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+  font-family: monospace;
+}
+
+/* QR Code Section */
+.qr-section {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  border: 2px solid var(--color-gray-200);
+}
+
+#qrcode {
+  display: inline-block;
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--radius-lg);
+}
+
+#qrcode canvas {
+  display: block;
+}
+
+.qr-hint {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Share Section */
+.share-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.share-input-group {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .share-input-group {
+    grid-template-columns: 1fr;
+  }
+}

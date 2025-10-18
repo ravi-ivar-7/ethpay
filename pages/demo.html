@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Try ethpay demo - Generate BAT payment links with QR codes instantly.">
+    <title>Demo - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/forms.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/demo.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <h1 class="section__title">Payment Link Generator Demo</h1>
+            <p class="text-center text-lg text-gray-600 mb-2xl">Create your BAT payment link in seconds</p>
+            
+            <div class="demo-grid">
+                <!-- Generator Form -->
+                <div class="demo-card">
+                    <h2 class="demo-card__title">Create Payment Link</h2>
+                    
+                    <form id="paymentForm" class="payment-form">
+                        <div class="form-group">
+                            <label for="amount" class="form-label">Amount (BAT)</label>
+                            <input 
+                                type="number" 
+                                id="amount" 
+                                class="form-input" 
+                                placeholder="5.00" 
+                                step="0.01"
+                                min="0"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="recipient" class="form-label">Recipient Address</label>
+                            <input 
+                                type="text" 
+                                id="recipient" 
+                                class="form-input" 
+                                placeholder="0x..." 
+                                required
+                            >
+                            <span class="form-help">Enter Ethereum address</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description" class="form-label">Description (Optional)</label>
+                            <input 
+                                type="text" 
+                                id="description" 
+                                class="form-input" 
+                                placeholder="Payment for services"
+                            >
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Generate Payment Link
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Preview Card -->
+                <div class="demo-card">
+                    <h2 class="demo-card__title">Payment Preview</h2>
+                    
+                    <div id="paymentPreview" class="payment-preview-demo">
+                        <div class="preview-placeholder">
+                            <p>Fill out the form to generate a payment link</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    <script src="../scripts/modules/payment/payment-link.js"></script>
+    <script src="../scripts/modules/payment/qr-generator.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Page Script -->
+    <script src="../scripts/pages/demo.js"></script>
+</body>
+</html>

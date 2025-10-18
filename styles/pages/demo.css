@@ -1,0 +1,201 @@
+/**
+ * Demo Page Styles
+ */
+
+.demo-section {
+  padding: var(--spacing-3xl) 0;
+  margin-top: 72px;
+  background: linear-gradient(180deg, #FAFBFC 0%, #FFFFFF 50%, #F8F9FA 100%);
+  position: relative;
+}
+
+.demo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(251, 84, 43, 0.2), transparent);
+}
+
+.section__title {
+  margin-bottom: var(--spacing-xl);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-gray-600 {
+  color: var(--color-gray-600);
+}
+
+.mb-2xl {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.demo-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FAFBFC 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.demo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.demo-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-xs);
+  position: relative;
+  z-index: 1;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.payment-preview-demo {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(251, 84, 43, 0.03) 0%, rgba(102, 45, 145, 0.03) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.preview-placeholder {
+  text-align: center;
+  color: var(--color-gray-400);
+  padding: var(--spacing-2xl);
+  font-size: var(--font-size-base);
+}
+
+.preview-content {
+  width: 100%;
+}
+
+.preview-amount {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.preview-description {
+  text-align: center;
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.preview-recipient {
+  text-align: center;
+  color: var(--color-gray-500);
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.preview-qr {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto var(--spacing-md);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-white);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-sm);
+}
+
+.preview-link {
+  background: linear-gradient(145deg, #F8F9FA 0%, #E9ECEF 100%);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-700);
+  word-break: break-all;
+  margin-bottom: var(--spacing-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.preview-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.preview-description {
+  text-align: center;
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-base);
+}
+
+.preview-recipient {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-section {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .demo-card {
+    padding: var(--spacing-xl);
+  }
+  
+  .preview-amount {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .preview-qr {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BAT payment tools - Currency converter, payment analytics, and more.">
+    <title>Tools - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">BAT Payment Tools</h1>
+            <p class="page-header__subtitle">Powerful tools to manage your BAT payments</p>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-3 gap-xl md:grid-cols-2 sm:grid-cols-1">
+                
+                <!-- Currency Converter -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">💱</div>
+                    <h3 class="feature-card__title">Currency Converter</h3>
+                    <p class="feature-card__description">
+                        Convert BAT to USD, EUR, ETH, and BTC with real-time exchange rates.
+                    </p>
+                    <a href="converter.html" class="btn btn--primary btn--full">Open Tool</a>
+                </div>
+
+                <!-- Payment Analytics -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">📊</div>
+                    <h3 class="feature-card__title">Payment Analytics</h3>
+                    <p class="feature-card__description">
+                        Track your payment history with visual charts and detailed analytics.
+                    </p>
+                    <a href="analytics.html" class="btn btn--primary btn--full">Open Tool</a>
+                </div>
+
+                <!-- Batch Payments -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">📤</div>
+                    <h3 class="feature-card__title">Batch Payments</h3>
+                    <p class="feature-card__description">
+                        Send BAT to multiple addresses at once with CSV upload support.
+                    </p>
+                    <a href="batch.html" class="btn btn--primary btn--full">Open Tool</a>
+                </div>
+
+                <!-- Payment Requests -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">📝</div>
+                    <h3 class="feature-card__title">Payment Requests</h3>
+                    <p class="feature-card__description">
+                        Create and track professional payment requests with status monitoring.
+                    </p>
+                    <a href="request.html" class="btn btn--primary btn--full">Open Tool</a>
+                </div>
+
+                <!-- Receipt Generator -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">🧾</div>
+                    <h3 class="feature-card__title">Receipt Generator</h3>
+                    <p class="feature-card__description">
+                        Generate professional payment receipts with on-chain verification.
+                    </p>
+                    <a href="receipt.html" class="btn btn--primary btn--full">Open Tool</a>
+                </div>
+
+                <!-- Transaction History -->
+                <div class="feature-card">
+                    <div class="feature-card__icon">📜</div>
+                    <h3 class="feature-card__title">Transaction History</h3>
+                    <p class="feature-card__description">
+                        View and export your complete BAT transaction history.
+                    </p>
+                    <a href="history.html" class="btn btn--primary btn--full">Open Tool</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/cta.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+</body>
+</html>

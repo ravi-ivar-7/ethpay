@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receipt Generator - Generate professional BAT payment receipts">
+    <title>Receipt Generator - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    <link rel="stylesheet" href="../styles/pages/receipt.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">🧾 Receipt Generator</h1>
+            <p class="page-header__subtitle">Generate professional payment receipts with verification</p>
+        </div>
+    </section>
+
+    <!-- Receipt Tool -->
+    <section class="section" style="padding: 0;">
+        <div class="container">
+            <div class="container-narrow">
+                
+                <!-- Receipt Form -->
+                <div class="receipt-card">
+                    <h3 class="receipt-card__title">Receipt Details</h3>
+                    
+                    <form id="receiptForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Transaction Hash</label>
+                                <input type="text" id="txHash" class="form-input" placeholder="0x..." required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Amount (BAT)</label>
+                                <input type="number" id="amount" class="form-input" placeholder="10.5" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Date</label>
+                                <input type="date" id="date" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">From Address</label>
+                                <input type="text" id="fromAddress" class="form-input" placeholder="0x..." required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">To Address</label>
+                                <input type="text" id="toAddress" class="form-input" placeholder="0x..." required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Description (Optional)</label>
+                                <input type="text" id="description" class="form-input" placeholder="Payment for services">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full btn--lg">
+                            Generate Receipt
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Receipt Preview -->
+                <div class="receipt-preview" id="receiptPreview" style="display: none;">
+                    <div class="receipt-document" id="receiptDocument">
+                        <div class="receipt-header">
+                            <h1 class="receipt-logo">ethpay</h1>
+                            <p class="receipt-subtitle">Payment Receipt</p>
+                        </div>
+                        
+                        <div class="receipt-info">
+                            <div class="receipt-row">
+                                <span class="receipt-label">Receipt #:</span>
+                                <span class="receipt-value" id="receiptNumber">-</span>
+                            </div>
+                            <div class="receipt-row">
+                                <span class="receipt-label">Date:</span>
+                                <span class="receipt-value" id="receiptDate">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="receipt-section">
+                            <h3 class="receipt-section-title">Transaction Details</h3>
+                            <div class="receipt-row">
+                                <span class="receipt-label">Amount:</span>
+                                <span class="receipt-value receipt-amount" id="receiptAmount">0 BAT</span>
+                            </div>
+                            <div class="receipt-row">
+                                <span class="receipt-label">From:</span>
+                                <span class="receipt-value receipt-address" id="receiptFrom">-</span>
+                            </div>
+                            <div class="receipt-row">
+                                <span class="receipt-label">To:</span>
+                                <span class="receipt-value receipt-address" id="receiptTo">-</span>
+                            </div>
+                            <div class="receipt-row">
+                                <span class="receipt-label">Description:</span>
+                                <span class="receipt-value" id="receiptDesc">-</span>
+                            </div>
+                            <div class="receipt-row">
+                                <span class="receipt-label">Transaction Hash:</span>
+                                <span class="receipt-value receipt-hash" id="receiptTxHash">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="receipt-footer">
+                            <p>This receipt is generated by ethpay.brave</p>
+                            <p>Verify transaction on Etherscan</p>
+                        </div>
+                    </div>
+                    
+                    <div class="receipt-actions">
+                        <button class="btn btn--primary btn--full" id="downloadBtn">
+                            Download Receipt (PDF)
+                        </button>
+                        <button class="btn btn--outline btn--full" id="newReceiptBtn">
+                            Create New Receipt
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Tool Script -->
+    <script src="../scripts/tools/receipt.js"></script>
+</body>
+</html>

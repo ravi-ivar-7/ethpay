@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BAT Currency Converter - Convert BAT to USD, EUR, ETH, BTC with real-time rates">
+    <title>Currency Converter - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    <link rel="stylesheet" href="../styles/pages/converter.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">💱 Currency Converter</h1>
+            <p class="page-header__subtitle">Convert BAT to multiple currencies with real-time exchange rates</p>
+        </div>
+    </section>
+
+    <!-- Converter Tool -->
+    <section class="section" style="padding: 0;">
+        <div class="container">
+            <div class="container-narrow">
+                
+                <!-- Converter Card -->
+                <div class="converter-card">
+                    
+                    <!-- From Section -->
+                    <div class="converter-section">
+                        <label class="converter-label">From</label>
+                        <div class="converter-input-group">
+                            <input type="number" id="fromAmount" class="converter-input" placeholder="0.00" value="100" min="0" step="0.01">
+                            <select id="fromCurrency" class="converter-select">
+                                <option value="bat" selected>BAT</option>
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="eth">ETH</option>
+                                <option value="btc">BTC</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Swap Button -->
+                    <div class="converter-swap">
+                        <button id="swapBtn" class="converter-swap-btn" aria-label="Swap currencies">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- To Section -->
+                    <div class="converter-section">
+                        <label class="converter-label">To</label>
+                        <div class="converter-input-group">
+                            <input type="number" id="toAmount" class="converter-input" placeholder="0.00" readonly>
+                            <select id="toCurrency" class="converter-select">
+                                <option value="bat">BAT</option>
+                                <option value="usd" selected>USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="eth">ETH</option>
+                                <option value="btc">BTC</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Exchange Rate Info -->
+                    <div class="converter-rate" id="rateInfo">
+                        <span class="converter-rate-text">Loading rates...</span>
+                    </div>
+
+
+                </div>
+
+                <!-- Quick Conversion Table -->
+                <div class="quick-rates">
+                    <h3 class="quick-rates__title">Quick Reference</h3>
+                    <div class="quick-rates__grid" id="quickRates">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Market Info -->
+                <div class="market-info" id="marketInfo">
+                    <!-- Populated by JavaScript -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Tool Script -->
+    <script src="../scripts/tools/converter.js"></script>
+</body>
+</html>

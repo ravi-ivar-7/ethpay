@@ -1,0 +1,277 @@
+/**
+ * Card Components
+ * Card styles with glassmorphism effects
+ */
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Glass Card */
+.card--glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Feature Card */
+.feature-card,
+a.feature-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(251, 84, 43, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+/* Arrow for clickable cards */
+a.feature-card::after {
+  content: '→';
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  opacity: 1;
+  transition: all 0.3s ease;
+  line-height: 1;
+  z-index: 10;
+}
+
+a.feature-card:hover::after {
+  transform: translateX(6px);
+  color: var(--color-primary-dark);
+}
+
+.feature-card::before,
+a.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+
+.feature-card:hover,
+a.feature-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(251, 84, 43, 0.15), 0 0 0 1px rgba(251, 84, 43, 0.2);
+  border-color: var(--color-primary);
+}
+
+.feature-card:hover::before,
+a.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card__icon {
+  font-size: var(--font-size-5xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.feature-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+.feature-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Stat Card */
+.stat-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FAFBFC 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(251, 84, 43, 0.03) 0%, rgba(102, 45, 145, 0.03) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(251, 84, 43, 0.12);
+  border-color: rgba(251, 84, 43, 0.2);
+}
+
+.stat-card:hover::after {
+  opacity: 1;
+}
+
+.stat-card__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-card__value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-card__change {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.stat-card__change.positive {
+  color: var(--color-success);
+}
+
+.stat-card__change.negative {
+  color: var(--color-error);
+}
+
+/* Payment Preview Card */
+.payment-preview {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FAFBFC 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(251, 84, 43, 0.2);
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-preview::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(251, 84, 43, 0.08) 0%, transparent 70%);
+}
+
+.payment-preview__header {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.payment-preview__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.payment-preview__body {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.payment-preview__amount {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.payment-preview__qr {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto var(--spacing-lg);
+  background: var(--color-gray-200);
+  border-radius: var(--radius-md);
+}
+
+.payment-preview__link {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  background: var(--color-gray-100);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+  }
+  
+  .feature-card__icon {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .feature-card__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .stat-card__value {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .payment-preview {
+    height: 300px;
+    padding: var(--spacing-lg);
+  }
+  
+  .payment-preview__amount {
+    font-size: var(--font-size-3xl);
+  }
+  
+  a.feature-card::after {
+    font-size: var(--font-size-3xl);
+    width: 40px;
+    height: 40px;
+  }
+}

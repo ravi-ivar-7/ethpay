@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transaction History - View and export your BAT transaction history">
+    <title>Transaction History - ethpay | BAT Payment Platform</title>
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logos/favicon.svg">
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/base/variables.css">
+    <link rel="stylesheet" href="../styles/base/typography.css">
+    <link rel="stylesheet" href="../styles/base/utilities.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="../styles/layouts/grid.css">
+    <link rel="stylesheet" href="../styles/layouts/containers.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="../styles/components/navigation.css">
+    <link rel="stylesheet" href="../styles/components/buttons.css">
+    <link rel="stylesheet" href="../styles/components/cards.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
+    <link rel="stylesheet" href="../styles/pages/history.css">
+    
+    <!-- Animation Styles -->
+    <link rel="stylesheet" href="../styles/animations/transitions.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">📜 Transaction History</h1>
+            <p class="page-header__subtitle">View and export your complete BAT transaction history</p>
+        </div>
+    </section>
+
+    <!-- History Tool -->
+    <section class="section" style="padding: 0;">
+        <div class="container">
+            
+            <!-- Filters -->
+            <div class="history-filters">
+                <div class="filter-group">
+                    <label class="filter-label">Search</label>
+                    <input type="text" id="searchInput" class="filter-input" placeholder="Search by address or hash...">
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Type</label>
+                    <select id="typeFilter" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="sent">Sent</option>
+                        <option value="received">Received</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Date Range</label>
+                    <select id="dateFilter" class="filter-select">
+                        <option value="all">All Time</option>
+                        <option value="today">Today</option>
+                        <option value="week">Last 7 Days</option>
+                        <option value="month">Last 30 Days</option>
+                        <option value="year">Last Year</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn--primary" id="exportBtn">
+                    Export CSV
+                </button>
+            </div>
+
+            <!-- Transaction List -->
+            <div class="history-card">
+                <div class="history-header">
+                    <h3 class="history-title">Transactions (<span id="txCount">0</span>)</h3>
+                    <button class="btn btn--outline btn--sm" id="refreshBtn">Refresh</button>
+                </div>
+                
+                <div class="transaction-list" id="transactionList">
+                    <!-- Populated by JavaScript -->
+                </div>
+                
+                <div class="history-empty" id="emptyState" style="display: none;">
+                    <div class="empty-icon">📭</div>
+                    <p class="empty-text">No transactions found</p>
+                    <p class="empty-hint">Connect your wallet to view transaction history</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Core Scripts -->
+    <script src="../scripts/core/app.js"></script>
+    <script src="../scripts/core/config.js"></script>
+    <script src="../scripts/core/utils.js"></script>
+    
+    <!-- Modules -->
+    <script src="../scripts/modules/wallet/wallet.js"></script>
+    
+    <!-- Components -->
+    <script src="../scripts/components/navigation.js"></script>
+    <script src="../scripts/components/footer.js"></script>
+    <script src="../scripts/components/toast.js"></script>
+    
+    <!-- Tool Script -->
+    <script src="../scripts/tools/history.js"></script>
+</body>
+</html>
