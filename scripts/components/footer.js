@@ -39,19 +39,17 @@ const FooterComponent = {
                   <li><a href="https://x.com/ImAditIyer" target="_blank" rel="noopener">Twitter</a></li>
                   <li><a href="https://discord.gg/ethpay" target="_blank" rel="noopener">Discord</a></li>
                   <li><a href="${this.getBasePath()}pages/about.html">About Us</a></li>
-                </ul>
               </div>
             </div>
           </div>
           
           <div class="footer__bottom">
-            <p class="footer__copyright">&copy; 2025 EthPay.brave. Built for Brave Website-Building Challenge.</p>
+            <p class="footer__copyright">&copy; 2025 EthPay. Simplifying BAT payments for the Brave ecosystem.</p>
           </div>
         </div>
       </footer>
     `;
   },
-
   getBasePath() {
     // Check if we're in a subdirectory (pages folder)
     return window.location.pathname.includes('/pages/') ? '../' : '';

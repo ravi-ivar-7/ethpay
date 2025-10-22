@@ -231,10 +231,52 @@
   box-shadow: 0 16px 48px rgba(255, 255, 255, 0.4);
 }
 /* Responsive */
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .hero .container {
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
+  }
+  
+  /* Make features grid responsive */
+  .features__grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
+  }
+  
+  /* Adjust video section layout */
+  section > .container > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-xl) !important;
+  }
+  
+  /* Adjust feature cards */
+  .feature-card {
+    padding: var(--spacing-lg) !important;
+  }
+  
+  /* Adjust video containers */
+  .video-container {
+    margin-bottom: var(--spacing-lg) !important;
+  }
+  
+  /* Make feature grid single column on mobile */
+  #features > .container > div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Adjust font sizes for mobile */
+  .section__title {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+  
+  .feature-card__title {
+    font-size: 1.25rem !important;
+  }
+  
+  .feature-card__description {
+    font-size: 0.9rem !important;
   }
   
   .hero__visual {

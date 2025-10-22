@@ -40,15 +40,21 @@ const NavigationComponent = {
               <li><a href="${basePath}pages/about.html" class="nav__link ${currentPage === 'about' ? 'nav__link--active' : ''}">About</a></li>
             </ul>
             
-            <a href="${basePath}pages/contact.html" class="btn btn--outline btn--contact">
-              <span class="btn--contact-full">Buy Domain/Code</span>
-              <span class="btn--contact-short">Buy</span>
-            </a>
-            
-            <button class="btn btn--primary btn--wallet" id="connectWallet">
-              <span class="btn--wallet-full">Connect Wallet</span>
-              <span class="btn--wallet-short">Wallet</span>
-            </button>
+            <div class="nav__actions">
+              <a href="${basePath}pages/contact.html" class="btn btn--outline btn--contact">
+                <span class="btn--contact-full">Buy Domain/Code</span>
+                <span class="btn--contact-short">Buy</span>
+              </a>
+              
+              <a href="mailto:aditiyer@protonmail.com" class="btn btn--outline btn--email" style="border-color: #10b981; color: #10b981;" title="Email us">
+                <span style="font-size: 18px;">✉️</span>
+              </a>
+              
+              <button class="btn btn--primary btn--wallet" id="connectWallet">
+                <span class="btn--wallet-full">Connect Wallet</span>
+                <span class="btn--wallet-short">Wallet</span>
+              </button>
+            </div>
             
             <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
               <span class="nav__toggle-icon"></span>

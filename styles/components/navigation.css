@@ -281,16 +281,59 @@
   }
 }
 
-.btn--contact {
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-left: auto;
+}
+
+.btn--contact,
+.btn--email,
+.btn--wallet {
   padding: 8px 12px;
   font-size: 13px;
   white-space: nowrap;
 }
 
+.btn--email {
+  padding: 8px 10px;
+  min-width: auto;
+}
+
 @media (max-width: 1024px) {
-  .btn--contact {
-    padding: 6px 8px;
+  .nav__content {
+    padding: 4px 0;
+  }
+  
+  .nav__logo {
+    font-size: var(--font-size-md);
+    margin-right: 4px;
+  }
+  
+  .nav__actions {
+    gap: 1px;
+    margin-right: 1px;
+  }
+  
+  .btn--contact,
+  .btn--wallet {
+    padding: 3px 4px;
+    font-size: 9px;
+    min-width: 50px;
+  }
+  
+  .btn--email {
+    padding: 3px 4px;
+  }
+  
+  .btn--email span {
     font-size: 11px;
+  }
+  
+  .nav__toggle {
+    margin-left: 2px;
+    padding: 4px;
   }
   
   .btn--contact-full {
