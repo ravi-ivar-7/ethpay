@@ -30,7 +30,11 @@ const PaymentLink = {
 
     // Generate link
     const baseUrl = window.location.origin;
-    const link = `${baseUrl}/pay/${linkId}`;
+    const link = `${baseUrl}/pages/pay.html?` + 
+      `to=${encodeURIComponent(recipient)}&` +
+      `amount=${encodeURIComponent(amount)}&` +
+      `desc=${encodeURIComponent(description)}&` +
+      `id=${linkId}`;
 
     return {
       link: link,

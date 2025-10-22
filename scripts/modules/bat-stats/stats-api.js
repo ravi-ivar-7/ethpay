@@ -9,6 +9,19 @@ const BATStats = {
     timestamp: null
   },
 
+  // Fallback data to show during loading or on error
+  fallbackData: {
+    price: 0.17,
+    priceChange24h: -2.13,
+    marketCap: 260943010,
+    volume24h: 30191945,
+    circulatingSupply: 1496000000,
+    totalSupply: 1500000000,
+    high24h: 0.18,
+    low24h: 0.16,
+    lastUpdated: new Date().toISOString()
+  },
+
   /**
    * Fetch BAT stats from CoinGecko
    */
@@ -62,55 +75,59 @@ const BATStats = {
   },
 
   /**
+   * Display stats (either real or fallback)
+   */
+  displayStats(stats) {
+    // Update price
+    const priceEl = Utils.$('#batPrice');
+    if (priceEl) {
+      priceEl.textContent = `$${stats.price.toFixed(2)}`;
+    }
+
+    // Update price change
+    const changeEl = Utils.$('#batChange');
+    if (changeEl) {
+      const change = stats.priceChange24h;
+      changeEl.textContent = `${change >= 0 ? '+' : ''}${change.toFixed(2)}%`;
+      changeEl.className = `stat-card__change ${change >= 0 ? 'positive' : 'negative'}`;
+    }
+
+    // Update market cap
+    const marketCapEl = Utils.$('#batMarketCap');
+    if (marketCapEl) {
+      const formatted = `$${(stats.marketCap / 1000000).toFixed(0)}M`;
+      marketCapEl.textContent = formatted.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    }
+
+    // Update volume
+    const volumeEl = Utils.$('#batVolume');
+    if (volumeEl) {
+      const formatted = `$${(stats.volume24h / 1000000).toFixed(0)}M`;
+      volumeEl.textContent = formatted.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    }
+
+    // Update supply
+    const supplyEl = Utils.$('#batSupply');
+    if (supplyEl) {
+      supplyEl.textContent = `${(stats.circulatingSupply / 1000000).toFixed(0)}M`;
+    }
+  },
+
+  /**
    * Update stats display on page
    */
   async updateDisplay() {
+    // Show fallback data immediately
+    this.displayStats(this.fallbackData);
+
     try {
       const stats = await this.getStats();
-
-      // Update price
-      const priceEl = Utils.$('#batPrice');
-      if (priceEl) {
-        priceEl.textContent = Utils.formatCurrency(stats.price);
-      }
-
-      // Update price change
-      const changeEl = Utils.$('#batChange');
-      if (changeEl) {
-        const change = stats.priceChange24h;
-        changeEl.textContent = `${change >= 0 ? '+' : ''}${change.toFixed(2)}%`;
-        changeEl.className = `stat-card__change ${change >= 0 ? 'positive' : 'negative'}`;
-      }
-
-      // Update market cap
-      const marketCapEl = Utils.$('#batMarketCap');
-      if (marketCapEl) {
-        marketCapEl.textContent = Utils.formatCurrency(stats.marketCap, 'USD').replace('.00', '');
-      }
-
-      // Update volume
-      const volumeEl = Utils.$('#batVolume');
-      if (volumeEl) {
-        volumeEl.textContent = Utils.formatCurrency(stats.volume24h, 'USD').replace('.00', '');
-      }
-
-      // Update supply
-      const supplyEl = Utils.$('#batSupply');
-      if (supplyEl) {
-        supplyEl.textContent = `${Utils.formatNumber(stats.circulatingSupply / 1000000, 0)}M`;
-      }
-
+      this.displayStats(stats);
       return stats;
     } catch (error) {
       console.error('Error updating BAT stats display:', error);
-      
-      // Show error in UI
-      const priceEl = Utils.$('#batPrice');
-      if (priceEl) {
-        priceEl.textContent = 'Error loading';
-      }
-      
-      throw error;
+      // Keep showing fallback data on error
+      return this.fallbackData;
     }
   },
 

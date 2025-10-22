@@ -12,8 +12,8 @@ const NavigationComponent = {
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="container">
           <div class="nav__content">
-            <a href="${basePath}index.html" class="nav__logo" aria-label="ethpay home">
-              <span class="nav__logo-text">ethpay</span>
+            <a href="${basePath}index.html" class="nav__logo" aria-label="EthPay home">
+              <span class="nav__logo-text">EthPay</span>
             </a>
             
             <ul class="nav__menu">
@@ -35,6 +35,7 @@ const NavigationComponent = {
                   <li><a href="${basePath}pages/history.html" class="nav__dropdown-link">📜 Transaction History</a></li>
                 </ul>
               </li>
+              <li><a href="${basePath}pages/demo.html" class="nav__link ${currentPage === 'demo' ? 'nav__link--active' : ''}">Demo</a></li>
               <li><a href="${basePath}pages/docs.html" class="nav__link ${currentPage === 'docs' ? 'nav__link--active' : ''}">Docs</a></li>
               <li><a href="${basePath}pages/about.html" class="nav__link ${currentPage === 'about' ? 'nav__link--active' : ''}">About</a></li>
             </ul>

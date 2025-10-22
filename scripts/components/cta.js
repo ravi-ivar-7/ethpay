@@ -13,7 +13,7 @@ const CTAComponent = {
           <div class="cta__content">
             <h2 class="cta__title">Ready to Get Started?</h2>
             <p class="cta__subtitle">Create your first BAT payment link in under a minute</p>
-            <a href="${basePath}pages/demo.html" class="btn btn--primary btn--large">Try Demo Now</a>
+            <a href="${basePath}pages/tools.html" class="btn btn--primary btn--large">Try Tools Now</a>
           </div>
         </div>
       </section>

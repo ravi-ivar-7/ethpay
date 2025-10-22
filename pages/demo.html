@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../styles/components/footer.css">
     
     <!-- Page Styles -->
+    <link rel="stylesheet" href="../styles/pages/features.css">
     <link rel="stylesheet" href="../styles/pages/demo.css">
     
     <!-- Animation Styles -->
@@ -35,10 +36,46 @@
     <!-- Navigation -->
     <div id="nav-placeholder"></div>
 
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-header__title">Demo & Try ethpay</h1>
+            <p class="page-header__subtitle">Watch video tutorials and try creating payment links yourself</p>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section style="background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%); padding: var(--spacing-5xl) 0; margin-top: var(--spacing-4xl);">
+        <div class="container">
+            <div style="max-width: 1000px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl);">
+                <!-- Demo Video -->
+                <div style="background: white; border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); border: 1px solid var(--color-gray-200);">
+                    <video width="100%" height="300" controls autoplay loop style="display: block; background: #000;">
+                        <source src="../assets/videos/demo.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div style="padding: var(--spacing-xl);">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-sm);">Platform Demo</h3>
+                        <p style="color: var(--color-gray-600); font-size: var(--font-size-md);">Complete walkthrough of ethpay features and tools</p>
+                    </div>
+                </div>
+                
+                <!-- YouTube Video -->
+                <div style="background: white; border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); border: 1px solid var(--color-gray-200);">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/uBI3kF0vs-U" title="ethpay Platform Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+                    <div style="padding: var(--spacing-xl);">
+                        <h3 style="font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-sm);">What is BAT Token?</h3>
+                        <p style="color: var(--color-gray-600); font-size: var(--font-size-md);">Learn about Basic Attention Token and the Brave ecosystem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Demo Section -->
     <section class="demo-section">
         <div class="container">
-            <h1 class="section__title">Payment Link Generator Demo</h1>
+            <h1 class="section__title">Try It Yourself - Payment Link Generator</h1>
             <p class="text-center text-lg text-gray-600 mb-2xl">Create your BAT payment link in seconds</p>
             
             <div class="demo-grid">
@@ -90,7 +127,7 @@
                 
                 <!-- Preview Card -->
                 <div class="demo-card">
-                    <h2 class="demo-card__title">Payment Preview</h2>
+                    <h2 class="demo-card__title" id="previewTitle">Payment Preview</h2>
                     
                     <div id="paymentPreview" class="payment-preview-demo">
                         <div class="preview-placeholder">

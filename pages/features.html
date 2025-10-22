@@ -43,129 +43,136 @@
         </div>
     </section>
 
-    <!-- Features Grid -->
-    <section class="features-page-section">
+    <!-- Features with Images -->
+    <section style="padding: var(--spacing-4xl) 0;">
         <div class="container">
-            <div class="features-detailed">
-                
-                <!-- Feature 1: Payment Links -->
-                <div class="feature-detail">
-                    <div class="feature-detail__icon">💳</div>
-                    <div class="feature-detail__content">
-                        <h2 class="feature-detail__title">Payment Link Generator</h2>
-                        <p class="feature-detail__description">
-                            Create shareable payment links in seconds. Simply enter the amount, recipient address, 
-                            and description to generate a unique payment link with QR code.
-                        </p>
-                        <ul class="feature-detail__list">
-                            <li>✓ Instant link generation</li>
-                            <li>✓ QR code for mobile payments</li>
-                            <li>✓ Copy to clipboard</li>
-                            <li>✓ Save payment history</li>
-                            <li>✓ Shareable via any platform</li>
-                        </ul>
-                        <a href="demo.html" class="btn btn--primary">Try It Now</a>
-                    </div>
+            
+            <!-- Feature 1: Currency Converter -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center; margin-bottom: var(--spacing-5xl);">
+                <div>
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-lg);">💱</div>
+                    <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-lg);">Currency Converter</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-gray-600); margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        Convert BAT to USD, EUR, ETH, and BTC instantly with real-time exchange rates. Our visual calculator makes conversions simple and accurate.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-xl);">
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Real-time exchange rates</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Multiple currency support</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Quick reference table</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Historical rates</li>
+                    </ul>
+                    <a href="converter.html" class="btn btn--primary btn--large">Use Converter</a>
                 </div>
-
-                <!-- Feature 2: Wallet Integration -->
-                <div class="feature-detail feature-detail--reverse">
-                    <div class="feature-detail__icon">🦁</div>
-                    <div class="feature-detail__content">
-                        <h2 class="feature-detail__title">Brave Wallet Integration</h2>
-                        <p class="feature-detail__description">
-                            Seamlessly connect your Brave Wallet for secure BAT transactions. 
-                            One-click connection with full transaction signing support.
-                        </p>
-                        <ul class="feature-detail__list">
-                            <li>✓ Instant wallet detection</li>
-                            <li>✓ Secure connection</li>
-                            <li>✓ View BAT balance</li>
-                            <li>✓ Sign transactions</li>
-                            <li>✓ Account management</li>
-                        </ul>
-                        <button class="btn btn--primary" id="connectWalletFeature">Connect Wallet</button>
-                    </div>
+                <div>
+                    <img src="../assets/images/features/currency-converter.png" alt="Currency Converter" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
                 </div>
-
-                <!-- Feature 3: Live Stats -->
-                <div class="feature-detail">
-                    <div class="feature-detail__icon">📊</div>
-                    <div class="feature-detail__content">
-                        <h2 class="feature-detail__title">Live BAT Statistics</h2>
-                        <p class="feature-detail__description">
-                            Real-time BAT token data powered by CoinGecko and Etherscan. 
-                            Stay updated with live prices, market cap, and trading volume.
-                        </p>
-                        <ul class="feature-detail__list">
-                            <li>✓ Real-time price updates</li>
-                            <li>✓ 24h price change tracking</li>
-                            <li>✓ Market cap & volume</li>
-                            <li>✓ Auto-refresh every 30s</li>
-                            <li>✓ Historical data</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Feature 4: Currency Converter -->
-                <div class="feature-detail feature-detail--reverse">
-                    <div class="feature-detail__icon">💱</div>
-                    <div class="feature-detail__content">
-                        <h2 class="feature-detail__title">Multi-Currency Converter</h2>
-                        <p class="feature-detail__description">
-                            Convert BAT to USD, EUR, ETH, and BTC instantly. 
-                            Real-time exchange rates for accurate conversions.
-                        </p>
-                        <ul class="feature-detail__list">
-                            <li>✓ BAT ↔ USD/EUR/ETH/BTC</li>
-                            <li>✓ Real-time exchange rates</li>
-                            <li>✓ Visual calculator</li>
-                            <li>✓ Historical rates</li>
-                            <li>✓ Quick conversions</li>
-                        </ul>
-                        <a href="tools.html" class="btn btn--primary">Use Converter</a>
-                    </div>
-                </div>
-
-                <!-- Feature 5: Payment Analytics -->
-                <div class="feature-detail">
-                    <div class="feature-detail__icon">📈</div>
-                    <div class="feature-detail__content">
-                        <h2 class="feature-detail__title">Payment Analytics</h2>
-                        <p class="feature-detail__description">
-                            Track your payment activity with visual charts and detailed analytics. 
-                            Export data for record keeping.
-                        </p>
-                        <ul class="feature-detail__list">
-                            <li>✓ Transaction history</li>
-                            <li>✓ Visual charts & graphs</li>
-                            <li>✓ Payment trends</li>
-                            <li>✓ Export to CSV</li>
-                            <li>✓ Filter & search</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Feature 6: Payment Requests -->
-                <div class="feature-detail feature-detail--reverse">
-                    <div class="feature-detail__icon">📝</div>
-                    <div class="feature-detail__content">
-                        <h2 class="feature-detail__title">Payment Request System</h2>
-                        <p class="feature-detail__description">
-                            Create professional payment requests with tracking. 
-                            Monitor payment status in real-time.
-                        </p>
-                        <ul class="feature-detail__list">
-                            <li>✓ Generate payment requests</li>
-                            <li>✓ Track payment status</li>
-                            <li>✓ Expiration timers</li>
-                            <li>✓ Payment notifications</li>
-                            <li>✓ Request history</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- Feature 2: Payment Analytics -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center; margin-bottom: var(--spacing-5xl); background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%); padding: var(--spacing-4xl); border-radius: var(--radius-2xl);">
+                <div>
+                    <img src="../assets/images/features/payment-analytics.png" alt="Payment Analytics" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
+                </div>
+                <div>
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-lg);">📊</div>
+                    <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-lg);">Payment Analytics</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-gray-600); margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        Track your BAT payment history with beautiful visual charts and detailed insights. Monitor trends, analyze patterns, and export data effortlessly.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-xl);">
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Visual charts & graphs</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Transaction volume tracking</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Payment trends analysis</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Export to CSV</li>
+                    </ul>
+                    <a href="analytics.html" class="btn btn--primary btn--large">View Analytics</a>
+                </div>
+            </div>
+
+            <!-- Feature 3: Batch Payments -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center; margin-bottom: var(--spacing-5xl);">
+                <div>
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-lg);">📤</div>
+                    <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-lg);">Batch Payments</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-gray-600); margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        Send BAT to multiple addresses at once with our CSV upload feature. Perfect for payroll, airdrops, and bulk distributions.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-xl);">
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ CSV file upload</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Multiple recipients</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Transaction preview</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Batch execution</li>
+                    </ul>
+                    <a href="batch.html" class="btn btn--primary btn--large">Start Batch Payment</a>
+                </div>
+                <div>
+                    <img src="../assets/images/features/batch-payments.png" alt="Batch Payments" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
+                </div>
+            </div>
+
+            <!-- Feature 4: Payment Requests -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center; margin-bottom: var(--spacing-5xl); background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%); padding: var(--spacing-4xl); border-radius: var(--radius-2xl);">
+                <div>
+                    <img src="../assets/images/features/payment-requests.png" alt="Payment Requests" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
+                </div>
+                <div>
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-lg);">📝</div>
+                    <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-lg);">Payment Requests</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-gray-600); margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        Create professional payment requests with QR codes and shareable links. Track payment status in real-time with our monitoring system.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-xl);">
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ QR code generation</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Shareable payment links</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Status tracking</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Payment notifications</li>
+                    </ul>
+                    <a href="request.html" class="btn btn--primary btn--large">Create Request</a>
+                </div>
+            </div>
+
+            <!-- Feature 5: Receipt Generator -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center; margin-bottom: var(--spacing-5xl);">
+                <div>
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-lg);">🧾</div>
+                    <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-lg);">Receipt Generator</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-gray-600); margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        Generate professional payment receipts with on-chain verification. Perfect for record keeping and accounting purposes.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-xl);">
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Professional templates</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ On-chain verification</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ PDF export</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Transaction details</li>
+                    </ul>
+                    <a href="receipt.html" class="btn btn--primary btn--large">Generate Receipt</a>
+                </div>
+                <div>
+                    <img src="../assets/images/features/receipt-generator.png" alt="Receipt Generator" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
+                </div>
+            </div>
+
+            <!-- Feature 6: Transaction History -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center; background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%); padding: var(--spacing-4xl); border-radius: var(--radius-2xl);">
+                <div>
+                    <img src="../assets/images/features/transaction-history.png" alt="Transaction History" style="width: 100%; border-radius: var(--radius-2xl); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
+                </div>
+                <div>
+                    <div style="font-size: 48px; margin-bottom: var(--spacing-lg);">📜</div>
+                    <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-dark); margin-bottom: var(--spacing-lg);">Transaction History</h2>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-gray-600); margin-bottom: var(--spacing-xl); line-height: 1.7;">
+                        View and export your complete BAT transaction history. Filter, search, and analyze all your payments in one place.
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: var(--spacing-xl);">
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Complete transaction log</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Advanced filtering</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ Search functionality</li>
+                        <li style="padding: var(--spacing-sm) 0; font-size: var(--font-size-md); color: var(--color-gray-700);">✓ CSV export</li>
+                    </ul>
+                    <a href="history.html" class="btn btn--primary btn--large">View History</a>
+                </div>
+            </div>
+
         </div>
     </section>
 

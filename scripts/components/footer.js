@@ -10,7 +10,7 @@ const FooterComponent = {
         <div class="container">
           <div class="footer__content">
             <div class="footer__brand">
-              <div class="footer__logo">ethpay</div>
+              <div class="footer__logo">EthPay</div>
               <p class="footer__tagline">Built for the Brave ecosystem</p>
             </div>
             
@@ -19,8 +19,8 @@ const FooterComponent = {
                 <h4 class="footer__heading">Product</h4>
                 <ul class="footer__list">
                   <li><a href="${this.getBasePath()}pages/features.html">Features</a></li>
-                  <li><a href="${this.getBasePath()}pages/demo.html">Demo</a></li>
                   <li><a href="${this.getBasePath()}pages/tools.html">Tools</a></li>
+                  <li><a href="${this.getBasePath()}pages/demo.html">Demo</a></li>
                 </ul>
               </div>
               
@@ -36,7 +36,7 @@ const FooterComponent = {
               <div class="footer__column">
                 <h4 class="footer__heading">Connect</h4>
                 <ul class="footer__list">
-                  <li><a href="https://twitter.com/ethpay" target="_blank" rel="noopener">Twitter</a></li>
+                  <li><a href="https://x.com/ImAditIyer" target="_blank" rel="noopener">Twitter</a></li>
                   <li><a href="https://discord.gg/ethpay" target="_blank" rel="noopener">Discord</a></li>
                   <li><a href="${this.getBasePath()}pages/about.html">About Us</a></li>
                 </ul>
@@ -45,7 +45,7 @@ const FooterComponent = {
           </div>
           
           <div class="footer__bottom">
-            <p class="footer__copyright">&copy; 2025 ethpay.brave. Built for Brave Website-Building Challenge.</p>
+            <p class="footer__copyright">&copy; 2025 EthPay.brave. Built for Brave Website-Building Challenge.</p>
           </div>
         </div>
       </footer>
